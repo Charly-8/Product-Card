@@ -1,0 +1,69 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+body {
+
+    h1 {
+        @include m.desktop {
+            font-size: 3rem;
+        }
+    }
+    
+    .card {
+
+        @include m.desktop {
+            width: 56rem;
+            height: 44rem;
+        }
+    
+        @include m.desktop {
+            @include m.grid(2, 0);
+        }
+    
+        .image {
+    
+            .phone {
+    
+                @include m.desktop {
+                    display: none;
+                }
+            }
+    
+            .desktop {
+    
+                .desktop__img {
+                    @include m.desktop {
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+
+        // Content
+    
+        .content {
+            @include m.desktop {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        .price {
+            .price__info {
+                @include m.desktop {
+                    margin-top: 2rem;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+
+        .content__add {
+            @include m.desktop {
+                height: 4rem;
+            }
+        }
+        
+    }
+}
+

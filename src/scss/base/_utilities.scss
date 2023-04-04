@@ -1,0 +1,22 @@
+@use 'variables' as v;
+
+body {
+    background-color: v.$cream;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    background-color: v.$white;
+}
+
+.content__add {
+    background-color: v.$darkcyan;
+}
+
+.price__info {
+    color: v.$darkcyan;
+}
